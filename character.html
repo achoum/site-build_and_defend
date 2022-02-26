@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Build & Defend - A Tale of Survival</title>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Achoum - Mathieu Guillame-Bert">
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="image/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style_new2.css" />
+    <link rel="stylesheet" href="css/style_news2_from_old.css" />
+
+    <!--[if lte IE 7]> <html class="ie67 ie678" lang="fr"> <![endif]-->
+    <!--[if IE 8]> <html class="ie8 ie678" lang="fr"> <![endif]-->
+
+    <!--[if IE]><script src="css/html5-ie.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+
+    <!-- === GOOGLE ANALYTICS === -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30866107-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+<div class="bloc_site">
+<header>
+	<div class="middle_head">
+		<div class="content_middle_head">
+			<a href="index.html" class="logo"></a>
+		</div>
+	</div>
+</header>
+<section>
+
+<nav>
+	<div class="top_menu"></div>
+	<div class="bottom_menu"></div>
+
+	<dl>
+		<dt><a href="index.html">Main page</a></dt>
+		<dd></dd>
+	</dl>
+	<dl>
+		<dt>How to play</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="faq.html">F.A.Q.</a></li>
+				<li><a style="width:250px;" href="tutorial.html">Tutorial</a></li>
+				<li><a style="width:250px;" href="character.html">Draw your characters</a></li>
+				<li><a style="width:250px;" href="configure64bits.html">Use Java 64 bitsw</a></li>
+				<li><a style="width:250px;" href="commands.html">Game command line</a></li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>Media</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="screenshots.html">Screen-Shot</a></li>
+				<li><a style="width:250px;" target="_blank"
+						href="https://www.youtube.com/user/TheAchoum/videos">Video</a></li>
+				<li><a style="width:250px;" href="presskit.html">Press kit</a></li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>Community</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="releases.html">Releases</a></li>
+			</ul>
+		</dd>
+	</dl>
+</nav>
+
+
+<div class="col_middle pixelborder">
+	<div class="col_middle_top"></div>
+	<div class="bottom_left"></div>
+	<div class="bottom_right"></div>
+
+	<h1>How to draw your own character</h1><br />
+
+	<h3>To draw your own character, you need to:</h3>
+
+	<ul class='mylist'>
+		<li>
+			<p>Download the <a href='image/player_skin_grid.png'>template picture:</p>
+			<img alt='character template' src='image/player_skin_grid.png'> </a><br /><br />
+		</li>
+		<li>
+			<p>Draw your character in this template.</p>
+			<p>If you don't have any drawing tool, I recommand you to use <a
+					href='http://www.getpaint.net/'>Paint.Net</a>. It is a nice, simple and free drawing software.<br />
+				Your picture need to respect some criterion:</p>
+			<ul class='mylist'>
+				<li>The picture should be a 126x176 pixels picture.</li>
+				<li>The picture is defined by a grid. In this grid, each line define the direction of the character and
+					each column define a sprite of the animation (look at the example for better understanding).</li>
+				<li>In this grid, the first cell of each line is the "stand still" sprit. The 6 remaining cells are the
+					sprit for the walk.</li>
+				<li>In each cell, at least 20% of the pixel should be opaque (alpha channel equal to 255)</li>
+				<!-- <li></li> -->
+			</ul>
+			<p>By the end, the picture show look like that: </p>
+			<img alt='example of custom skin' src='image/player_skin_grid_2.png'>
+		</li>
+		<li>
+			<p>Erase the red borders of the template. By the end, the picture show look like that: <br /><br />
+				<img src='image/player_skin_grid_3.png' alt='final example of skin'>
+			</p>
+		</li>
+		<li>Save the picture as a <a target='_blank' href='http://en.wikipedia.org/wiki/Portable_Network_Graphics'>png
+				file</a> with the 32-bit RGBA colors format.</li>
+		<li>Import the file in the game (<span style='color:orange'>Option/Players/Player 1,2,3 or 4/Import
+				character/Select a file</span>).</li>
+	</ul>
+
+
+</div>
+
+<div class="both"></div>
+</section>
+<footer>
+    <div id="social_f">
+        <a target="_blank" href="https://twitter.com/mat_gb" style="margin-left:2px;"
+            title="Visit Twitter page"><img src="image/twitter1.png" class="img_social" alt="twitter"></a>
+
+        <a target="_blank" href="https://www.youtube.com/user/TheAchoum/videos" style="margin-left:2px;"
+            title="Visit Youtube page"><img src="image/youtube1.png" class="img_social" alt="youtube"></a>
+
+        <a target="_blank" href="http://steamcommunity.com/groups/buildanddefend" style="margin-left:2px;"
+            title="Visit Steam page"><img src="image/steam1.png" class="img_social" alt="steam"></a>
+
+        <a target="_blank" href="http://www.indiedb.com/games/build-defend" style="margin-left:2px;"
+            title="Visit IndieDb page"><img src="image/indiedb.png" class="img_social" alt="IndieDb"></a>
+    </div>
+    <span class="">Build &amp; Defend &copy; Copyright 2014 - <a href="contact.html">By Achoum &amp; Amandine</a> <br>
+        <a href="legal.html">Terms of Use</a> | <a href="contact.html">Thanks to</a>
+    </span>
+</footer>
+</div>
+</body>
+</html>

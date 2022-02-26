@@ -1,0 +1,958 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Build & Defend - A Tale of Survival</title>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Achoum - Mathieu Guillame-Bert">
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="image/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style_new2.css" />
+    <link rel="stylesheet" href="css/style_news2_from_old.css" />
+
+    <!--[if lte IE 7]> <html class="ie67 ie678" lang="fr"> <![endif]-->
+    <!--[if IE 8]> <html class="ie8 ie678" lang="fr"> <![endif]-->
+
+    <!--[if IE]><script src="css/html5-ie.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+
+    <!-- === GOOGLE ANALYTICS === -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30866107-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</head>
+<body>
+<div class="bloc_site">
+<header>
+	<div class="middle_head">
+		<div class="content_middle_head">
+			<a href="index.html" class="logo"></a>
+		</div>
+	</div>
+</header>
+<section>
+
+<div class="trailer">
+    <iframe width="520" height="340" src="http://www.youtube.com/embed/dQDUQUwg-Ro" frameborder="0"
+        allowfullscreen></iframe>
+</div>
+
+<div class="play2">
+    <a href="download.html">
+        <img src="image/playbutton_group_play.png">
+    </a>
+</div>
+
+<div class="both"></div>
+
+<div class="info_play">
+    <span class="inscrits">108'808 registered players</span>
+    <span class="currentversion">Version 1.0.34</span>
+</div>
+
+<span class="both"></span>
+
+<div class="screen">
+    <div class="top_left"></div>
+    <div class="top_right"></div>
+    <div class="bottom_left"></div>
+    <div class="bottom_right"></div>
+    <a href="" id='leftarrow'><img src="image/arrow_left.png" class="fleche_d"></a>
+
+    <div class="slide">
+        <div id='subslide' class="subslide">
+            
+            <a href='screen\0.10.x alpha\10.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\d87343cfea002059536360ae32c02429.png' /></a>
+            
+            <a href='screen\0.8.x alpha\04.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\f8a2901db6963c9fa777170e45e5ad3d.png' /></a>
+            
+            <a href='screen\1.0.x beta\05.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\a3ee3301f1888d90eb91a2f31241f17d.png' /></a>
+            
+            <a href='screen\1.0.x beta\07.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\752f35c4d5ae41e1a3de16aa660bb84e.png' /></a>
+            
+            <a href='screen\1.0.x beta\12.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\13bd02b049ebc931b8e7c5228cf86d41.png' /></a>
+            
+            <a href='screen\1.0.x beta\09.png' rel='lightbox[roadtrip]'><img class='mini' src='thumbnail\3a94745139bc6fc60f701d4494382c35.png' /></a>
+            
+        </div>
+    </div>
+
+    <a href="" id='rightarrow'><img src="image/arrow_right.png" class="fleche_g"></a>
+
+    <script>
+        $("#leftarrow").click(function () {
+
+            if ($("#subslide").css("left").replace('px', '') < 0) {
+                $("#subslide").animate({
+                    left: "+=230px",
+                }, 500);
+            }
+            event.preventDefault();
+        });
+        $("#rightarrow").click(function () {
+
+            $("#subslide").animate({
+                left: "-=230px",
+            }, 500);
+            event.preventDefault();
+        });
+    </script>
+
+</div>
+
+<div class="both"></div>
+
+<nav>
+	<div class="top_menu"></div>
+	<div class="bottom_menu"></div>
+
+	<dl>
+		<dt><a href="index.html">Main page</a></dt>
+		<dd></dd>
+	</dl>
+	<dl>
+		<dt>How to play</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="faq.html">F.A.Q.</a></li>
+				<li><a style="width:250px;" href="tutorial.html">Tutorial</a></li>
+				<li><a style="width:250px;" href="character.html">Draw your characters</a></li>
+				<li><a style="width:250px;" href="configure64bits.html">Use Java 64 bitsw</a></li>
+				<li><a style="width:250px;" href="commands.html">Game command line</a></li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>Media</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="screenshots.html">Screen-Shot</a></li>
+				<li><a style="width:250px;" target="_blank"
+						href="https://www.youtube.com/user/TheAchoum/videos">Video</a></li>
+				<li><a style="width:250px;" href="presskit.html">Press kit</a></li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>Community</dt>
+		<dd style="width:250px;">
+			<ul>
+				<li><a style="width:250px;" href="releases.html">Releases</a></li>
+			</ul>
+		</dd>
+	</dl>
+</nav>
+
+
+<div class="col_middle">
+
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Quick announcement about the free playable version of B&D</h1>
+        <div class="date">21 July, 2014</div>
+        <div class="text"> <p>Hello all,</p>
+<p>This is a quick announcement about the free playable version of B&D. Since some time already, it has become harder and harder for me to keep both the free and the full version of B&D running. Therefore I decided to stop releasing the free version of B&D. In a couple of day, I will release the version 1.0.29 of B&D, and at the same time, I will remove the link free version of B&D. </p>
+<p>This will only give me more time for all the nice new features I want to add to the game :)</p>
+<p>Cheers</p>
+</div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Water in video games</h1>
+        <div class="date">18 February, 2014</div>
+        <div class="text"> <p>
+If you ever played video games, (video game) water probably is something that is deeply rooted in your brain, and You FEAR it.
+Depending of your age, you first encounter with water might have been Quest for Tires, Rayman or Call of Duty, but the result is the same.
+</p>
+
+<p>
+In video game, water is this strange static thing that will kill you (one way or another).
+Sometime, it behaves as an invisible wall that mark the impassable border of the known universe.
+Some other times, water is this strange thing that will kill you at the instant you dip a toe in it.
+In the other hand, the real water is this common substance that you drink every day, that you use to take your shower, and in which you swim at the swimming pool.
+If you think about it, the similarity between the water in video game, and the real water is very thin.
+If you are like me, you probably never though about the similarities and the differences of video game water and real world water.
+</p>
+
+<p>
+Recently, with the development of Build&amp;Defend, I got interested in the different types and properties of waters in video games.
+My goal was to find which type of water would made the best game play.
+So, just for fun, I tried to organize the various types of water in a list. I hope you will enjoy it. 
+</p>
+
+<h2>The water pit</h2>
+<p>
+In most platform video games, water and holes (in the ground) play the same role: If you fall in it, you die.
+Games with this type of water include: Mario, Worms, Metal Slug, Ghouls 'N Ghosts (the infamous), Frogger, Joe & Mac, Quest for Tires.
+This is the most basic and probably the most common type of water in video game.
+</p>
+
+<a class='base_fig' href="articles/GNG_JM.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/GNG_JM.png' /><br />
+Water in Ghouls 'N Ghosts (SNES) and Joe & Mac (Snes)
+</a>
+
+<h2>Water to explore</h2>
+<p>
+Slightly more recently, games made players able to explore sub-marine areas.
+In those areas, the physic around the character is generally altered e.g. lower walking speed, higher jumps, ability to float.
+In some games, in order to simulate respiration, the player can only stay a limited amount of time in the water.
+In some games, this constraint leads to stressful puzzles and skills challenges (Earthworm Jim, Ninja Turtles on Nes).
+Example of such games include Super Mario 3, Tomb Raider, Ecco the Dolphin , Aquaria, Half Life, Earthworm Jim and BioShock.
+This type of water is probably the simplest type of non trivial water simulation.
+</p>
+
+<a class='base_fig' href="articles/ecco_tr_large.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/ecco_tr.png' /><br />
+Ecco the Dolphin (Mega Drive), and Tomb Raider (PC)
+</a>
+
+<h2>Border of the world water</h2>
+<p>
+In exploration games, designers need to set boundaries to the world.
+These boundaries can be rocks, visible walls, invisible walls ... and water. 
+Using water as world boundary is very common in RPGs and open worlds games.
+Games with this type of water include: Zelda (more of the games of the series), Black and white, Final fantasy, Farcry, Dead island, Worms (again), Fez.
+</p>
+
+
+<a class='base_fig' href="articles/zelda_fc_large.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/zelda_fc.png' /><br />
+Far Cry and Zelda : Link's Awakening water border.
+</a>
+
+<p>
+Until now, the games we talked about all used some static water: The water does not flow nor move anywhere.
+However, more recently, video games have been able (more or less accurately) to simulate the motion of water, and to create game plays around it.
+It is important to note that some of the previously presented games (e.g. Zelda3, Tomb Raider, Half Life) allow for the water to move.
+However, in these games, the number of configuration for the water is very limited: For example, in Zelda 3 (in the Swamp Palace), water valves can either be open or closed.
+Consequently, some parts of the world are either submerged or not.
+We call this type of water the "Scripted water".
+</p>
+
+<a class='base_fig' href="articles/zelda3_pipe.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/zelda3_pipe.png' /><br />
+Zelda 3 : The Swamp Palace valve system
+</a>
+
+<p>
+For the most simplistic type of water motion simulation, Minecraft is the first game that come into my mind. In a few words, I will try to explain how the water works in Minecraft.
+In am not from the Minecraft dev. team so everything I wrote just speculation based on observations.
+</p>
+
+<p>
+In Minecraft, the world is a 3D Cartesian grid where each cell is set to one (and only one) type of material (e.g. stone, air, wood and water).
+Cells of certain kind (like water) contain extra information such as the "amount of water" in the cell.
+All rivers and seas and lakes are made of these "water cells".
+In order to simulate water, the game keeps a list of "active" water cells. Next, and at each water simulation loop, each "active" water cell looks to its direct neighbor cells (bellow or at the same level -- so, 5 neighbors to look at) and try to transfer a bit of water in them (if it makes sense).
+The rule that allow water to be transferred do not follow the laws of conservation: Depending on the cell's organization, the total amount of water can increase or decrease.
+In the current version of Minecraft, the rules are set to ensure that the total amount of water cannot grow to the infinite (and so flood the entire world).
+This was not the case in the earlier versions of Minecraft: Remember the Minecraft floods (<a href='http://www.youtube.com/watch?v=H67Vn445IQs' target='_blank'>YouTube video</a>).
+</p>
+
+<p>
+However, Minecraft's water has a behavior that is hard to grasp at first:
+There are two types of water cells: The generative and the non-generative ones.
+The generative ones cannot spread (but they can generate non-generative water cells).
+The non-generative cannot "survive" alone: If they are not connected (in a specific way) to a generative water cell, they disappear.
+This behavior allows to easily create static water cascads.
+On the other hand, it is not possible to "transfer" water by letting it flow in a channel.
+</p>
+
+<a class='base_fig' href="articles/minecraft_cascad_large.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/minecraft_cascad.png' /><br />
+Minecraft static water cascad.
+</a>
+
+<p>
+Dwarf Fortress is known to have a very nice water simulation system.
+Like in Minecraft, you can have rivers and lakes. But you can also have very nice and intricate water pipe systems.
+Similarly to Minecraft, the world of Dwarf Fortress is represented as a 3D Cartesian grid where each cell is set to one type of material.
+The main difference between Minecraft and Dwarf Fortress's water are the rules used to transfer water between cells:
+Dwarf Fortress's rules follow the laws of conservation (except for the evaporation).
+Also, in Dwarf Fortress, water can be transfered by letting it flow in a channel.
+Additionally, when the game look for neighbor cells in order to transfer water, Dwarf Fortress does not only look to immediate neighbors but to all (transitive) neighbors.
+As a consequence, water in a flat area will spread until the area is completely covered (or until the granularity of water is reached).
+I discovered recently that Dwarf Fortress's can also simulate water's pressure (an approximation).
+The best experiment to illustrate the water pressure is the U-Bend test:
+Imagine a U-Bend with water coming from one side and trying to escape from the other side.
+Because of atmospheric pressure and the earth gravity, the level of water in the two sides of the U-bend should be the same.
+The figure bellow show hows the water of Minecraft, Dwarf Fortress and Build&Defend behave in the U-Bend.
+</p>
+
+<a class='base_fig' href="articles/waterbygame.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/waterbygame.png' /><br />
+Water in a U-turn in video games.
+</a>
+
+<p>
+As accurate as Dwarf Fortress water simulation is, it does not simulate the inertia of water. The inertia of water is what will make the water of a Geyser to go high up. Water inertia can be simulated with cells, but it requiere more computation power, show plenty of conservation problems, and give poor results with low resolution grids (like Minecraft or Dwarf Fortress). This is probably the reason why it is not implemented in any video games.
+</p>
+
+<p>
+Now is the time for me to talk about the way I implemented the water in Build&Defend. 
+The water simulation of Build&amp;Defend is actually close to the water simulation of Dwarf Fortress: The water follows the laws of conservation,  approximates spread and pressure, and it does not deal with inertia.
+Actually, the two differences between B&amp;D and DF resides in the simulation of water's pressure: Build&amp;Defend will equalize both side of the U-bend while Dwarf Fortress will make the water level on the entry side (left side on the fig.) higher that the water level on the exit side.
+This is the reason why I took me so long before discovering that Dwarf Fortress actually had some water pressure simulation.
+The other difference I can think of is that, for computationnal reasons, when looking for "neighbor cells", Build&amp;Defend does not look for cells that are more than 16 steps aways.
+</p>
+
+<div class='base_fig'>
+<iframe width="420" height="315" src="//www.youtube.com/embed/0U4bNkrc6uY" frameborder="0" allowfullscreen></iframe>
+<br />
+Build & Defend : Water in a U-turn.
+</div>
+
+<p>
+Build&amp;Defend's water has a feature that I did not find in any other cell based game: The hability to <i>push</i> water with a piston.
+The gifs bellow show some examples of that.
+</p>
+
+<a class='base_fig'>
+<img class='base_picture_noborder' src='videos/mechanic_pump.gif' />
+<img class='base_picture_noborder' src='videos/mechanic_valve.gif' /><br />
+Water pushed by pistons in Build&amp;Defend.
+</a>
+
+<p>
+If you try to do that in Minecraft, here is what you will get (spoiler: the water disappears):
+</p>
+
+<a class='base_fig' href="videos/minecraft_water_piston.gif" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='videos/minecraft_water_piston.gif' /><br />
+Minecraft : pistons and water.
+</a>
+
+<p>
+Terraria and King Artur Gold are two examples of 2D games that rely on a 2D Cartesian grids to simulate water. Note that neither of them simulate water pressure not inertia.
+</p>
+
+<p>
+In both Minecraft and Dwarf Fortress, the water is simulated with a cell automata (this is the name used to describe this kind of cell/rule system).
+However, some other games have used other types of water simulation.
+"Go to hell" is a small 2D flash game (very fun to play) where the water is simulated with particles (Smooth Particle Hydrodynamics to be exact).
+In this game, the water is represented by a large set of particles that behave like little balls. If you already been a Ball Poll, you know what I mean.
+This type of simulation is generaly more realistic that the cell approaches of Minecraft and Dwarf Fortress, but it also require a more powerful computer:
+With today personnal computers, it is not possible to simulate 3D games with the Ball Poll technique. On the other hand, it works very well for 2D games.
+"Liquid war" and "Vessel" are two examples of 2D games where the game play relies strongly on the particles fluid simulation.
+</p>
+
+<a class='base_fig' href="articles/ballpoll.png" rel='lightbox[roadtrip]'>
+<img class='base_picture_noborder' src='articles/ballpoll.png' /><br />
+A Ball poll.
+</a>
+
+<p>
+At some point, computers will turn powerful enough to simulate 3D worlds with the Ball Poll technique (or a mix between Cell and Ball Poll). We just have to wait.
+</p>
+
+<p>
+We cannot talk about water in video game without talking about other domains that use water simulation.
+Nowadays, physicists and computer scientists know how to simulate water (and other fluids) quit realistically.
+The simulations are wildly used to test products that interact with fluids (e.g. planes, rockets and cars).
+Fluid simulation is also been extensively used in movies (e.g. Avatar, Transformers and Pirates of Caribbean).
+And, with the democratization of GPU, small amount of water can be "realistically" simulated in real times on personal computers.
+I am very impatient to see video game designers using these technologies to create new innovating game play.
+</p>
+
+<div class='base_fig'>
+<iframe width="420" height="315" src="//www.youtube.com/embed/DxawCFRSwts" frameborder="0" allowfullscreen></iframe>
+<br />
+Water simulation in Battleship, 2012
+</div>
+
+<h2>References (non trivial links to find)</h2>
+
+<p>
+Dwarf Fortress : Water<br />
+<a class='withtab' href='http://dwarffortresswiki.org/index.php/DF2012:Water'>http://dwarffortresswiki.org/index.php/DF2012:Water</a><br />
+<a class='withtab' href='http://dwarffortresswiki.org/index.php/DF2012:Pressure'>http://dwarffortresswiki.org/index.php/DF2012:Pressure</a>
+</p>
+
+<p>
+Minecraft : Water<br />
+<a class='withtab' href='http://minecraft.gamepedia.com/Water'>http://minecraft.gamepedia.com/Water</a>
+</p>
+
+<p>
+Minecraft: Water flood<br />
+<a class='withtab' href='http://www.youtube.com/watch?v=H67Vn445IQs'>http://www.youtube.com/watch?v=H67Vn445IQs</a>
+</p>
+
+<p>
+Go to hell<br />
+<a class='withtab' href='http://www.addictinggames.com/funny-games/go-to-hell-game.jsp'>http://www.addictinggames.com/funny-games/go-to-hell-game.jsp</a>
+</p>
+
+<p>
+Liquid War<br />
+<a class='withtab' href='http://www.gnu.org/software/liquidwar6'>http://www.gnu.org/software/liquidwar6</a>
+</p>
+
+<div class="both"></div></div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Say hello to the new and improved website!</h1>
+        <div class="date">25 January, 2014</div>
+        <div class="text"> 
+<div id='hideshow_piston_1' class='base_fig' style='display:none;'>
+<img src="videos/mechanic_elevator.gif" class='base_picture'>
+<img src="videos/mechanic_coude.gif" class='base_picture'>
+<img src="videos/mechanic_pump.gif" class='base_picture'>
+<img src="videos/mechanic_valve.gif" class='base_picture'>
+<img src="videos/mechanic_stair2.gif" class='base_picture'>
+</div>
+
+<a id='hideshow_piston_button' href="" class='right_fig'>
+<img id='hideshow_piston_2' src="videos/mechanic_elevator.gif" class='base_picture'><br />
+Show/Hide the other animated Gifs
+</a>
+
+<script>
+$( "#hideshow_piston_button,#hideshow_piston_1" ).click(function() {
+	  $( "#hideshow_piston_1" ).toggle( "slow");
+	  $( "#hideshow_piston_2" ).toggle( "slow");
+	  event.preventDefault();
+	});
+</script>
+
+
+<p>
+Hello everybody,
+</p>
+
+<p>
+As you may have noticed, the web site of B&amp;D had some changes. But, do not worry, everything is still here (forum, achievement, etc.).
+The new releases are now on the right side, and the center column is reserved for articles and posts.
+</p>
+
+<p>
+For the first post, I will show you what I am currenlty working on: <b>The pistons</b>.
+A picture is worth a thousand words, so here are some gifs showing how pistons work :)
+</p>
+
+<p>
+Pistons will be pretty useful to gather water, make doors, to make draw-bridges, or to make deadly crunching traps.
+</p>
+
+<p>
+Pistons are simple oriented blocks that are able to push other blocks, fluids and entities (like the players or the monsters).
+Pistons can also be "attached" to blocks, so when they retract, they drag the blocks.
+More than one block can be attached, and not neceserally in strait lines.
+Pistons can also crunch or push some of the enemies. Obviously, bosses cannot be moved by pistons.
+Piston can also be broken is the shaft if torn off.
+</p>
+
+<p>
+On the figure bellow, you can see a picture presenting how they work. This is still a preliminary work and their final behaviour may differ slightly.
+In a few words, the "order of construction "(building the piston before or after the adjacent blocks) will define if they are attached or not to these blocks.
+</p>
+
+<a class='base_fig' href="videos/presentationPiston.png" rel='lightbox[roadtrip]'>
+<img class='base_picture' src='miniature.php?pic=videos/presentationPiston.png&w_max=300&h_max=300' /><br />
+Click to enlage
+</a>
+
+
+<p>
+That is all for this first new. We hope you enjoy the new web site, and we hope you will soon enjoy the pistons!
+</p>
+
+<div class="both"></div>
+</div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Dev. News #2 - Farming and Catapults</h1>
+        <div class="date">22 December, 2013</div>
+        <div class="text"> This video shows you the basic of the new farming system, and the use of catapults by the workers.
+
+I hope you will enjoy it :)
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/ByCpAcyWVPM" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Opening of the Build & Defend Wiki!</h1>
+        <div class="date">30 July, 2013</div>
+        <div class="text"> The new Wiki of Build & Defend is finally online.
+
+You can access it at:
+http://buildanddefend.com/wiki
+
+I will complete it slowly. In the mean time, please fell free to enrich it.</div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Discussion about Alchemistry</h1>
+        <div class="date">28 April, 2013</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Announce of the new website and the new version of Build & Defend</h1>
+        <div class="date">05 December, 2012</div>
+        <div class="text"> Hello all!
+
+I was very busy those last two months, and it's been a while has not had new features -- but it is over now!
+In the next days, I will be release the new web site and the new version 0.10.0 of build & defend.
+
+This new web site will be simpler to use, and it will include a chat and a set of video tutorials of how to play Build & Defend.
+
+The new version of the game includes a lot of new content and game play. Just to cite some of the new features: A minimap system, new monsters (jumper, healer, etc.), new items (iron, claw traps, etc.), a new boss and finally, the possibility to draw your own characters, and the addition of the Dungeon Mod!
+
+Spoiler: *The Dungeon Mod is a multiplayer Rogue like game where you will have to explore huge dungeons full of monsters and traps*
+</div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.8</h1>
+        <div class="date">11 October, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.7</h1>
+        <div class="date">01 October, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.6</h1>
+        <div class="date">27 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.5</h1>
+        <div class="date">26 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.4</h1>
+        <div class="date">15 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.3</h1>
+        <div class="date">10 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.2</h1>
+        <div class="date">07 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.1</h1>
+        <div class="date">07 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 9.0</h1>
+        <div class="date">06 September, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Return from holyday and announce of the Alpha 9</h1>
+        <div class="date">29 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.6</h1>
+        <div class="date">12 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>About the current website lag</h1>
+        <div class="date">12 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.5</h1>
+        <div class="date">12 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.4</h1>
+        <div class="date">08 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.3</h1>
+        <div class="date">05 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.2</h1>
+        <div class="date">03 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.1</h1>
+        <div class="date">02 August, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 8.0</h1>
+        <div class="date">31 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 7.2</h1>
+        <div class="date">22 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 7.1</h1>
+        <div class="date">20 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 7.0</h1>
+        <div class="date">20 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>You can configure your country now! (for a little flag next to your name)</h1>
+        <div class="date">20 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Addition of a Private message system</h1>
+        <div class="date">20 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6.5</h1>
+        <div class="date">19 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6.4</h1>
+        <div class="date">18 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Preview of Build & Defend Alpha 7 - The Workers</h1>
+        <div class="date">18 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6.3 </h1>
+        <div class="date">16 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6.2</h1>
+        <div class="date">16 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Addition of the Wiki/detailled stats of all the items</h1>
+        <div class="date">13 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6.1</h1>
+        <div class="date">12 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>List of survival tips added to the website</h1>
+        <div class="date">10 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 6</h1>
+        <div class="date">07 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>New video : Preview of B&D Alpha 6 new features</h1>
+        <div class="date">06 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Release of Build & Defend Alpha 5</h1>
+        <div class="date">01 July, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Beginning of the Alpha test 2</h1>
+        <div class="date">24 April, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Begening of the Alpha test 1</h1>
+        <div class="date">12 April, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+    <div class="article_main">
+        <div class="top_left"></div>
+        <div class="top_right"></div>
+        <div class="bottom_left"></div>
+        <div class="bottom_right"></div>
+        <h1>Grand opening !!!</h1>
+        <div class="date">11 April, 2012</div>
+        <div class="text"> </div>
+    </div>
+    
+
+</div>
+
+
+
+<div class="both"></div>
+</section>
+<footer>
+    <div id="social_f">
+        <a target="_blank" href="https://twitter.com/mat_gb" style="margin-left:2px;"
+            title="Visit Twitter page"><img src="image/twitter1.png" class="img_social" alt="twitter"></a>
+
+        <a target="_blank" href="https://www.youtube.com/user/TheAchoum/videos" style="margin-left:2px;"
+            title="Visit Youtube page"><img src="image/youtube1.png" class="img_social" alt="youtube"></a>
+
+        <a target="_blank" href="http://steamcommunity.com/groups/buildanddefend" style="margin-left:2px;"
+            title="Visit Steam page"><img src="image/steam1.png" class="img_social" alt="steam"></a>
+
+        <a target="_blank" href="http://www.indiedb.com/games/build-defend" style="margin-left:2px;"
+            title="Visit IndieDb page"><img src="image/indiedb.png" class="img_social" alt="IndieDb"></a>
+    </div>
+    <span class="">Build &amp; Defend &copy; Copyright 2014 - <a href="contact.html">By Achoum &amp; Amandine</a> <br>
+        <a href="legal.html">Terms of Use</a> | <a href="contact.html">Thanks to</a>
+    </span>
+</footer>
+</div>
+</body>
+</html>

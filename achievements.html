@@ -1,0 +1,51 @@
+<h1>List of all the achievements</h1>
+
+<?php
+
+$achievements = getAllAchievements();
+
+foreach( $achievements as $a )
+	{
+		
+	echo '
+	<div class="achivements">
+	
+	<div class="achivements_picture">
+	<a href="'.$a['url'].'">
+	<img src="'.$a['picture'].'">
+	</a>
+	</div>
+	
+	<div class="achivements_text">
+	
+	<div class="achivements_percent">
+	<div class="achivements_percent_value">';
+	
+	if( $a['players'] == 0 )
+		echo "*nobody*";
+	else 
+		echo $a['players'].' player(s)';
+	
+	echo '</div>
+	</div>
+			
+	<div class="achivements_name">
+	<a href="'.$a['url'].'">
+	'.$a['name'].'
+	</a>
+	</div>
+	<div class="achivements_description">
+	'.$a['description'];
+	
+	if( isset( $_GET['debug'] ) )
+		echo "<br />".$a['trigger']." x".$a['maxCounter'];
+	
+	echo '</div>
+			
+	</div>
+	
+	</div>';
+			
+	}
+
+?>
